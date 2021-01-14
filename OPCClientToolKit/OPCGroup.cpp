@@ -335,9 +335,17 @@ COPCItem * COPCGroup::addItem(std::string &itemName, bool active)
 	std::vector<COPCItem *> itemsCreated;
 	std::vector<HRESULT> errors;
 	names.push_back(itemName);
-	if (addItems(names, itemsCreated, errors, active)!= 0){
-		throw OPCException("Failed to add item");
+	try
+	{
+		addItems(names, itemsCreated, errors, active);
 	}
+	catch (const std::exception&)
+	{
+
+	}
+	//if (addItems(names, itemsCreated, errors, active)!= 0){
+	//	throw OPCException("Failed to add item");
+	//}
 	return itemsCreated[0];
 }
 

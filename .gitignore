@@ -10,3 +10,8 @@ x64/Debug/
 *.sdf
 *.opensdf
 *.suo
+.vs/
+Debug/
+LocalSyncWrapper/Debug/
+OPC Core Components Redistributable (x64) 3.0.105.1/
+update.bat
